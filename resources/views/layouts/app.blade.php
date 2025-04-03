@@ -16,7 +16,7 @@
                 @include('layouts.sidebar')
             </div>
 
-            <div class="basis-4/5 flex justify-end md:justify-center mt-5 ">
+            <div class="basis-4/5 flex justify-center pl-15 md:justify-center md:pl-0 mt-5 ">
                 @yield('content')
             </div>
         </div>

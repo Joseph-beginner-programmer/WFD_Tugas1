@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="grid min-[72em]:grid-cols-3 min-[50em]:grid-cols-2 min-[30em]:grid-cols-1 
+<div class="grid grid-cols-1 min-[72em]:grid-cols-3 min-[50em]:grid-cols-2 
 min-[72em]:gap-x-[5vw] min-[50em]:gap-x-[5vw] min-[40em]-gap-x-[3vw] gap-y-[2vw]">
     @foreach ($events as $event)
     <div class=" w-[17em] h-[18.5em] bg-yellow-500">
