@@ -96,9 +96,15 @@ class EventController extends Controller
         if ($validated) {
             $title = $request->title;
             $description = $request->description;
+            $image = $request->file("image");
+            $path = null;
+            if ($image !== null) {
+                $path = $image->store('images', 'public');
+            }
             Event::where('id', $id)->update([
                 "title" => $title,
-                "description" => $description
+                "description" => $description,
+                "image_url" => $path
             ]);
             Session::flash('status', 'Event is edited successfully!');
             return redirect()->route('events.index');
